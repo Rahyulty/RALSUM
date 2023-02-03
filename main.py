@@ -27,11 +27,18 @@ def get_estimate(function, direction):
             return "underestimate"
         elif direction == "right" and function == "concave down":
             return "overestimate"
+        elif direction == "midpoint" and function == "increasing":
+            return "exact"
+        elif direction == "midpoint" and function == "decreasing":
+            return "exact"
+        elif direction == "midpoint" and function == "concave up":
+            return "exact"
+        elif direction == "midpoint" and function == "concave down":
+            return "exact"
         else:
             return "Invalid input"   
     else:
         return "bad type"
-        print("Did not pass type check")
 
 
 root = tk.Tk()
